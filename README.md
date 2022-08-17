@@ -13,10 +13,13 @@
 
 - **add(range)**: Add range into the list. Ignore those parts that already exist
   - Usage: `rangeList.add([left, right]);	//left <= right`
+  - Complexity: Time O(N), Space O(1), where N is the size of the list
 - **remove(range)**: Remove range out of the list. Ignore those part that do not exist
   - Usage: `rangeList.remove([left, right]);	//left <= right`
+  - Complexity: Time O(N), Space O(1), where N is the size of the list
 - **print()**: Print all the existing ranges by ascending order
   - Usage: `rangeList.print();	//example: [1, 5) [8, 16) [17, 18)`
+  - Complexity: Time O(N), Space O(1), where N is the size of the list
 
 ### Testing
 
