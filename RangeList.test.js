@@ -67,22 +67,22 @@ describe('RangeList', () => {
         rangeList.add([17, 18]);
         test('remove valid range', () => {
             console.log = jest.fn();
-            rangeList.remove([0,1]);
+            rangeList.remove([0, 1]);
             expect(rangeList.getRanges()).toBe('[1, 5) [8, 16) [17, 18)');
 
-            rangeList.remove([9,15]);
+            rangeList.remove([9, 15]);
             expect(rangeList.getRanges()).toBe('[1, 5) [8, 9) [15, 16) [17, 18)');
 
-            rangeList.remove([9,11]);
+            rangeList.remove([9, 11]);
             expect(rangeList.getRanges()).toBe('[1, 5) [8, 9) [15, 16) [17, 18)');
 
-            rangeList.remove([10,11]);
+            rangeList.remove([10, 11]);
             expect(rangeList.getRanges()).toBe('[1, 5) [8, 9) [15, 16) [17, 18)');
 
-            rangeList.remove([0,9]);
+            rangeList.remove([0, 9]);
             expect(rangeList.getRanges()).toBe('[15, 16) [17, 18)');
 
-            rangeList.remove([-3,20]);
+            rangeList.remove([-3, 20]);
             expect(rangeList.getRanges()).toBe('');
         });
 
